@@ -1,0 +1,16 @@
+/* home.component.css */
+
+/* Remove unwanted margins/padding */
+:host {
+  display: block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Optional: if Tailwind base styles are missing */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,65 @@
+<div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div
+    *ngFor="let interview of interviews"
+    class="bg-white rounded-xl shadow-md p-4"
+  >
+    <h2 class="text-xl font-bold mb-1">{{ interview.name }}</h2>
+    <p *ngIf="interview.role" class="text-sm text-gray-600 italic">
+      {{ interview.role }}
+    </p>
+    <p *ngIf="interview.bio" class="text-sm text-gray-600 italic">
+      {{ interview.bio }}
+    </p>
+
+    <img
+      *ngIf="interview.image"
+      [src]="interview.image"
+      alt="Interview image"
+      class="my-3 w-auto h-48 object-cover rounded-lg"
+    />
+
+    <p *ngIf="interview.summary" class="mb-3 text-gray-700">
+      {{ interview.summary }}
+    </p>
+
+    <p *ngIf="interview.videooraudioSub" class="mb-3 text-red-700 text-2xl">
+      {{ interview.videooraudioSub }}
+    </p>
+
+    <!-- Embedded video/audio -->
+    <div *ngIf="interview.safeUrl" class="mt-4">
+      <!-- YouTube video -->
+      <iframe
+        *ngIf="interview.rawUrl?.includes('youtube')"
+        [src]="interview.safeUrl"
+        frameborder="0"
+        allowfullscreen
+        class="w-full aspect-video rounded-md"
+      >
+      </iframe>
+
+      <!-- Local MP4 video -->
+      <video
+        *ngIf="interview.rawUrl?.endsWith('.mp4')"
+        [src]="interview.safeUrl"
+        controls
+        class="w-full rounded-md"
+      >
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Audio file -->
+      <audio
+        *ngIf="interview.rawUrl?.endsWith('.mp3')"
+        [src]="interview.safeUrl"
+        controls
+        class="w-full mt-2"
+      >
+        Your browser does not support the audio element.
+      </audio>
+      <p *ngIf="interview.videooraudioSub" class="mb-3 text-gray-700">
+        {{ interview.interviewDescription }}
+      </p>
+    </div>
+  </div>
+</div>

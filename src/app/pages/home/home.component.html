@@ -1,0 +1,72 @@
+<!-- Fullscreen Hero Section -->
+<!-- Hero Section with Background Image + Hover Zoom -->
+<section class="relative w-full min-h-screen overflow-hidden group">
+  <!-- Background Image with Hover Zoom -->
+  <div
+    class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-105"
+    style="
+      background-image: url('/hero-section-image.jpg');
+      filter: brightness(0.6);
+    "
+  ></div>
+
+  <!-- Overlay Text Content -->
+  <div
+    class="relative z-10 flex flex-col items-center justify-center text-center text-white px-4 md:px-8 min-h-screen"
+  >
+    <h1
+      class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-yellow-300"
+    >
+      Liberation War Archive
+    </h1>
+    <p class="font-mono text-lg md:text-xl max-w-2xl mb-4">
+      Honoring the courage, sacrifice, and triumph of Bangladesh's
+      <span class="bg-white text-red-800 font-bold">1971</span>
+      Liberation War.
+    </p>
+    <p class="font-mono text-base md:text-lg max-w-xl text-gray-200">
+      Explore personal stories, historical documents, and a rich archive of the
+      nation’s most defining moments.
+    </p>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="w-full bg-[#e4e4e4] py-20 px-4 md:px-12">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+    <!-- Document Feature -->
+    <div
+      class="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-[#0B3D2E] hover:scale-105 transform transition duration-300"
+    >
+      <h2 class="text-xl font-semibold text-[#0B3D2E] mb-4">📄 Documents</h2>
+      <p class="text-gray-700 text-lg">
+        Explore official treaties, declarations, and archived papers from the
+        war effort.
+      </p>
+    </div>
+
+    <!-- Interview Feature -->
+    <div
+      class="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-[#D62828] hover:scale-105 transform transition duration-300"
+    >
+      <h2 class="text-xl font-semibold text-[#D62828] mb-4">🎤 Interviews</h2>
+      <p class="text-gray-700 text-lg">
+        Listen to the voices of freedom fighters, civilians, and survivors who
+        witnessed history.
+      </p>
+    </div>
+
+    <!-- Photo Gallery Feature -->
+    <div
+      class="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-[#FFC300] hover:scale-105 transform transition duration-300"
+    >
+      <h2 class="text-xl font-semibold text-[#FFC300] mb-4">
+        📷 Photo Gallery
+      </h2>
+      <p class="text-gray-700 text-lg">
+        View high-resolution photos capturing the essence of the 1971 Liberation
+        War.
+      </p>
+    </div>
+  </div>
+</section>
